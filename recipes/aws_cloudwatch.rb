@@ -1,5 +1,5 @@
 # verify ruby dependency
-#verify_ruby 'AWS Cloudwatch Plugin'
+verify_ruby 'AWS Cloudwatch Plugin'
 
 # check required attributes
 verify_attributes do
