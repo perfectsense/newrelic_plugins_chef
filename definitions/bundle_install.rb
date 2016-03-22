@@ -5,9 +5,13 @@ define :bundle_install do
   end
 
   # bundle install
-  execute '/opt/chef/embedded/bin/bundle install' do
+  execute 'install' do
     cwd params[:path]
-    command "bundle install"
+    if params[:user] == 'root'
+      command 'bundle install'
+    else
+      command 'bundle install --path vendor/bundle'
+    end
     #user params[:user]
     only_if { File.directory?(params[:path]) }
   end
