@@ -1,6 +1,6 @@
 define :bundle_install do
   # install bundler gem
-  chef_gem 'bundler' do
+  gem_package 'bundler' do
     options '--no-ri --no-rdoc'
   end
 
